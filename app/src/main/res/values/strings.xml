@@ -1,0 +1,23 @@
+<resources>
+    <!-- General Settings strings-->
+    <string name="app_name">MovieApp</string>
+
+    <string name="menu_refresh">Refresh</string>
+    <string name="menu_popularity">Popularity</string>
+    <string name="menu_top_rated">Top Rated</string>
+
+    <string name="no_movie">Theres no movie to show at this moment.\nPlease, check you internet connection.</string>
+    <string name="check_connection">Please, check your connection with the internet</string>
+    <string name="text_ok">OK</string>
+    <string name="something_wrong">Something went wrong...</string>
+
+    <string name="original_title">original_title</string>
+    <string name="poster">poster</string>
+    <string name="vote_average">vote_average</string>
+    <string name="release_date">release_date</string>
+    <string name="overview">overview</string>
+
+    <string name="title">Title</string>
+    <string name="rate">Rate</string>
+    <string name="release">Release Date</string>
+</resources>
