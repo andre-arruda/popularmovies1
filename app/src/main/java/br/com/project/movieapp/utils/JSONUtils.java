@@ -23,29 +23,31 @@ public class JSONUtils {
         ArrayList<MovieEntity> movieList = new ArrayList<MovieEntity>();
 
         try {
-            json = new JSONObject(response);
+            if (response != null) {
+                json = new JSONObject(response);
 
-            movies = json.getJSONArray("results");
+                movies = json.getJSONArray("results");
 
-            MovieEntity movie = null;
+                MovieEntity movie = null;
 
-            for (int i=0 ; i < movies.length() ; i++){
+                for (int i = 0; i < movies.length(); i++) {
 
-                movie = new MovieEntity();
+                    movie = new MovieEntity();
 
-                JSONObject objJSON = (JSONObject) movies.get(i);
+                    JSONObject objJSON = (JSONObject) movies.get(i);
 
-                movie.setId(objJSON.getInt("id"));
-                movie.setVoteAverage(objJSON.getDouble("vote_average"));
-                movie.setPopularity(objJSON.getDouble("popularity"));
-                movie.setTitle(objJSON.getString("title"));
-                movie.setOriginalTitle(objJSON.getString("original_title"));
-                movie.setOverview(objJSON.getString("overview"));
-                movie.setPosterPath(objJSON.getString("poster_path"));
-                movie.setReleaseDate(objJSON.getString("release_date"));
+                    movie.setId(objJSON.getInt("id"));
+                    movie.setVoteAverage(objJSON.getDouble("vote_average"));
+                    movie.setPopularity(objJSON.getDouble("popularity"));
+                    movie.setTitle(objJSON.getString("title"));
+                    movie.setOriginalTitle(objJSON.getString("original_title"));
+                    movie.setOverview(objJSON.getString("overview"));
+                    movie.setPosterPath(objJSON.getString("poster_path"));
+                    movie.setReleaseDate(objJSON.getString("release_date"));
 
-                movieList.add(movie);
+                    movieList.add(movie);
 
+                }
             }
 
         } catch (JSONException e) {
